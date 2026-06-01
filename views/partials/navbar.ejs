@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <div class="logo">
+  <img src="/images/logo.jpeg" alt="Homebridge Africa Logo">
+</div>
+
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <ul id="nav-links" class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/immersion">Immersion</a></li>
+    <li><a href="/empowerment">Empowerment</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/ngo">NGO</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+  </ul>
+</nav>
+
+<script>
+function toggleMenu() {
+  const nav = document.getElementById("nav-links");
+  nav.classList.toggle("active");
+}
+</script>

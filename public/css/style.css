@@ -1,0 +1,1220 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f8f7f4;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   SCROLL PROGRESS BAR
+========================= */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: #c8a96a;
+  z-index: 9999;
+}
+
+/* =========================
+   NAVBAR (GLASS EFFECT)
+========================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(11, 46, 38, 0.85);
+  backdrop-filter: blur(10px);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #c8a96a;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO (PARALLAX STYLE)
+========================= */
+
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: url("/images/ghana.png") center/cover fixed;
+  position: relative;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #c8a96a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background: #b89650;
+}
+
+.primary-btn {
+  background: #c8a96a;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   ABOUT GHANA
+========================= */
+
+.about-ghana {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 80px 40px;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+.ghana-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.ghana-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.ghana-text p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* IMAGE GRID */
+.ghana-images {
+  flex: 1;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 140px;
+  gap: 10px;
+}
+
+.img-box {
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.4s ease;
+}
+
+.img-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.img1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  background-image: url('/images/image1.jpg');
+}
+
+.img2 { background-image: url('/images/ghana.png'); }
+.img3 { background-image: url('/images/image3.jpg'); }
+.img4 { background-image: url('/images/image4.jpg'); }
+.img5 { background-image: url('/images/image5.jpg'); }
+
+/* =========================
+   STATS SECTION (FULL UPGRADE)
+========================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #f0ede7, #ffffff);
+}
+
+.stat {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.stat .icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+  color: #c8a96a;
+}
+
+.stat h2 {
+  font-size: 3rem;
+  color: #0b2e26;
+  margin: 0;
+}
+
+.stat p {
+  color: #555;
+  margin-top: 10px;
+}
+
+/* progress bar */
+.stat::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: #eee;
+}
+
+.stat::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  background: #c8a96a;
+}
+
+.stat:nth-child(1)::before { width: 85%; }
+.stat:nth-child(2)::before { width: 70%; }
+.stat:nth-child(3)::before { width: 60%; }
+
+/* =========================
+   CTA SECTION
+========================= */
+
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: #0b2e26;
+  color: white;
+}
+
+/* =========================
+   FOOTER (REDUCED)
+========================= */
+
+.footer {
+  background: #0b2e26;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+}
+
+.footer h3 {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.footer p {
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about-ghana {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .ghana-images {
+    grid-template-columns: 1fr;
+  }
+
+  .img1 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .services {
+    padding: 50px 20px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+}
+/* =========================
+   ABOUT PAGE HERO
+========================= */
+
+.about-hero {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('/images/independence-square.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.about-hero-content {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   ABOUT CONTENT
+========================= */
+
+.about-section {
+  padding: 90px 20px;
+  background: white;
+}
+
+.about-section h2 {
+  text-align: center;
+  color: #0b2e26;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+.about-section p {
+  max-width: 900px;
+  margin: auto;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   MISSION & VISION
+========================= */
+
+.mission-vision {
+  padding: 90px 20px;
+  background: #f3f0ea;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  color: #0b2e26;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   VALUES SECTION
+========================= */
+
+.values-section {
+  background: white;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.value-card {
+  background: #fafafa;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+}
+
+.value-card h3 {
+  color: #c8a96a;
+}
+
+/* =========================
+   WHY HOMEBRIDGE
+========================= */
+
+.why-homebridge {
+  background: #f8f7f4;
+  padding: 90px 20px;
+}
+
+.why-homebridge h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #0b2e26;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+}
+
+.reason {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.reason h3 {
+  color: #0b2e26;
+}
+
+/* =========================
+   IMPACT SECTION
+========================= */
+
+.impact-section {
+  background: #0b2e26;
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.impact-section h2 {
+  margin-bottom: 50px;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 25px;
+}
+
+.impact-box {
+  background: rgba(255,255,255,0.08);
+  padding: 35px;
+  border-radius: 15px;
+}
+
+.impact-box h3 {
+  color: #c8a96a;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   ABOUT CTA
+========================= */
+
+.about-cta {
+  text-align: center;
+  padding: 90px 20px;
+  background: #f3f0ea;
+}
+
+.about-cta h2 {
+  color: #0b2e26;
+}
+
+.about-cta p {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+/* =========================
+   IMMERSION HERO
+========================= */
+
+.immersion-hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('/images/independence square.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.immersion-hero-content {
+  max-width: 850px;
+  padding: 20px;
+}
+
+.immersion-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.immersion-hero p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience-section {
+  padding: 90px 20px;
+  background: white;
+}
+
+.experience-section h2 {
+  text-align: center;
+  color: #0b2e26;
+  margin-bottom: 50px;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+}
+
+.experience-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+}
+
+.experience-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.experience-content {
+  padding: 25px;
+}
+
+.experience-content h3 {
+  color: #0b2e26;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   ITINERARY SECTION
+========================= */
+
+.itinerary {
+  background: #f8f7f4;
+  padding: 90px 20px;
+}
+
+.itinerary h2 {
+  text-align: center;
+  color: #0b2e26;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline-item {
+  background: white;
+  margin-bottom: 25px;
+  padding: 25px;
+  border-left: 5px solid #c8a96a;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.timeline-item h3 {
+  color: #0b2e26;
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials {
+  padding: 90px 20px;
+  background: white;
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: #0b2e26;
+  margin-bottom: 50px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 25px;
+}
+
+.testimonial {
+  background: #fafafa;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.testimonial h4 {
+  margin-top: 20px;
+  color: #c8a96a;
+}
+
+/* =========================
+   IMMERSION CTA
+========================= */
+
+.immersion-cta {
+  text-align: center;
+  padding: 90px 20px;
+  background: #0b2e26;
+  color: white;
+}
+
+.immersion-cta h2 {
+  margin-bottom: 20px;
+}
+
+.immersion-cta p {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+
+.why-us {
+  padding: 80px 10%;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.why-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+}
+
+.why-card h3 {
+  margin-bottom: 15px;
+  color: #0b6e4f;
+}
+
+
+/* =========================================
+   FEATURED DESTINATIONS
+========================================= */
+
+.destinations {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.destination-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.destination-info {
+  padding: 20px;
+}
+
+.destination-info h3 {
+  margin-bottom: 10px;
+  color: #0b6e4f;
+}
+
+
+/* =========================================
+   TESTIMONIALS
+========================================= */
+
+.testimonials {
+  background: #f8f9fa;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.testimonial-card h4 {
+  color: #0b6e4f;
+}
+
+
+/* =========================================
+   PARTNERS
+========================================= */
+
+.partners {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.partner-logo {
+  background: white;
+  min-width: 220px;
+  padding: 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+
+/* =========================================
+   NEWSLETTER
+========================================= */
+
+.newsletter {
+  padding: 80px 10%;
+  text-align: center;
+  background: linear-gradient(
+      rgba(11,110,79,0.9),
+      rgba(11,110,79,0.9)
+    ),
+    url('/images/ghana-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.newsletter h2 {
+  margin-bottom: 15px;
+}
+
+.newsletter p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.newsletter-form input {
+  width: 350px;
+  max-width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.newsletter-form button {
+  background: #f4b400;
+  color: #222;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   SECTION TITLES
+========================================= */
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #0b6e4f;
+}
+
+.section-subtitle {
+  max-width: 700px;
+  margin: auto;
+  color: #666;
+}
+
+
+/* =========================================
+   FADE IN ANIMATION
+========================================= */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+
+  .why-us,
+  .destinations,
+  .testimonials,
+  .partners,
+  .newsletter {
+    padding: 60px 5%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+/* ABOUT HERO */
+
+.about-hero{
+    min-height:70vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.55)),
+    url('/images/about-hero.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+}
+
+.about-hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.about-hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+/* STORY */
+
+.our-story{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.story-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.story-content h2{
+    color:#0b6e4f;
+    margin-bottom:25px;
+}
+
+/* MVV */
+
+.mvv{
+    padding:80px 10%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    background:#f8f9fa;
+}
+
+.mvv-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* DIFFERENCE */
+
+.difference{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.difference-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.difference-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* TEAM */
+
+.team{
+    padding:80px 10%;
+    background:#f8f9fa;
+    text-align:center;
+}
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.team-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.team-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+/* IMPACT */
+
+.impact{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.impact-grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:40px;
+}
+
+.impact-box{
+    background:#0b6e4f;
+    color:white;
+    padding:30px;
+    min-width:220px;
+    border-radius:15px;
+}
+
+/* CTA */
+
+.about-cta{
+    padding:80px 10%;
+    text-align:center;
+    background:#0b6e4f;
+    color:white;
+}
+
+.about-cta h2{
+    margin-bottom:20px;
+}
+
+.about-cta p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:25px;
+}
