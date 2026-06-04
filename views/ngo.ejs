@@ -1,24 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HomeBridge Foundation</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-    <%- include('partials/navbar') %>
-  <h1>HomeBridge Foundation</h1>
+  <%- include('partials/navbar') %>
 
-  <p>
-    Extending impact beyond connection. Our NGO arm focuses on sustainable
-    community development and long-term partnerships in Ghana.
-  </p>
+  <!-- HERO SECTION -->
+  <section class="ngo-hero">
+    <div class="ngo-overlay">
+      <h1>HomeBridge Foundation</h1>
+      <p>
+        Bridging cultures, empowering young minds, and building brighter futures
+        through education, exchange, and community impact.
+      </p>
+    </div>
+  </section>
 
-  <ul>
-    <li>Education Support</li>
-    <li>Community Development</li>
-    <li>Youth Empowerment</li>
-  </ul>
+  <!-- INTRO SECTION -->
+  <section class="ngo-intro">
+
+    <div class="ngo-text">
+      <h2>Who We Are</h2>
+
+      <p>
+        HomeBridge Foundation is the nonprofit arm of HomeBridge Africa,
+        dedicated to creating meaningful opportunities for children and students
+        through educational support, cultural exchange, and literacy development.
+      </p>
+
+      <p>
+        We believe every child deserves access to knowledge, global exposure,
+        and safe learning spaces that inspire creativity, confidence, and growth.
+      </p>
+    </div>
+
+    <div class="ngo-image">
+      <img src="/images/library-kids.jpg" alt="Children reading in a library">
+    </div>
+
+  </section>
+
+  <!-- PROGRAMS SECTION -->
+  <section class="ngo-programs">
+
+    <h2>Our Focus Areas</h2>
+
+    <div class="program-grid">
+
+      <div class="program-card">
+        <img src="/images/student-exchange.jpg" alt="Student exchange program">
+
+        <h3>Student Exchange Programs</h3>
+
+        <p>
+          Connecting students across cultures through immersive learning,
+          leadership experiences, and international exposure that broadens
+          perspectives and builds lifelong relationships.
+        </p>
+      </div>
+
+      <div class="program-card">
+        <img src="/images/library-project.jpg" alt="Library project">
+
+        <h3>Library Development</h3>
+
+        <p>
+          Building and supporting school libraries to foster reading habits,
+          improve literacy, and provide children with access to educational resources.
+        </p>
+      </div>
+
+      <div class="program-card">
+        <img src="/images/community-learning.jpg" alt="Community learning">
+
+        <h3>Youth Literacy & Learning</h3>
+
+        <p>
+          Organizing reading sessions, mentorship activities, and educational
+          initiatives that encourage curiosity, confidence, and academic growth.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- IMPACT SECTION -->
+  <section class="ngo-impact">
+
+    <div class="impact-content">
+      <h2>Creating Lasting Impact</h2>
+
+      <p>
+        Through partnerships, volunteer support, and community collaboration,
+        HomeBridge Foundation is committed to empowering future generations
+        through education and cultural connection.
+      </p>
+
+      <a href="/contact" class="ngo-btn">Partner With Us</a>
+    </div>
+
+  </section>
+
+  <%- include('partials/footer') %>
 
 </body>
 </html>

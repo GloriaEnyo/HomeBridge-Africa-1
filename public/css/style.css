@@ -1,4 +1,5 @@
 
+
 /* =========================
    GLOBAL STYLES
 ========================= */
@@ -260,13 +261,13 @@ body {
 .img1 {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
-  background-image: url('/images/image1.jpg');
+  background-image: url('/images/volta.jpg');
 }
 
 .img2 { background-image: url('/images/ghana.png'); }
-.img3 { background-image: url('/images/image3.jpg'); }
-.img4 { background-image: url('/images/image4.jpg'); }
-.img5 { background-image: url('/images/image5.jpg'); }
+.img3 { background-image: url('/images/beach.jpg'); }
+.img4 { background-image: url('/images/kakum.jpg'); }
+.img5 { background-image: url('/images/festival.png'); }
 
 /* =========================
    STATS SECTION (FULL UPGRADE)
@@ -952,7 +953,7 @@ body {
       rgba(11,110,79,0.9),
       rgba(11,110,79,0.9)
     ),
-    url('/images/ghana-bg.jpg');
+    url('/images/ghana.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -1072,7 +1073,7 @@ body {
     background:
     linear-gradient(rgba(0,0,0,.55),
     rgba(0,0,0,.55)),
-    url('/images/about-hero.jpg');
+    url('/images/capecoast.jpg');
     background-size:cover;
     background-position:center;
     display:flex;
@@ -1217,4 +1218,340 @@ body {
     max-width:700px;
     margin:auto;
     margin-bottom:25px;
+}
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.gallery-section {
+  padding: 80px 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  background: white;
+}
+.gallery-item img:hover {
+  transform: scale(1.05);
+  transition: 0.4s ease;
+}
+.event-showcase {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.event-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.event-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.event-details {
+  flex: 1;
+  min-width: 300px;
+}
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.5),
+  rgba(0,0,0,0.5)),
+  url('/images/contact.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-overlay {
+  color: white;
+  padding: 20px;
+}
+
+.contact-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.contact-overlay p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  padding: 80px 10%;
+  background: #fff;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  margin-bottom: 25px;
+  color: #1d3557;
+}
+
+.info-card {
+  background: #f8f7f4;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.info-card h3 {
+  margin-bottom: 10px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 15px;
+  border: none;
+  background: #d4a373;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #bc8a5f;
+}
+
+.map-section {
+  padding: 60px 10%;
+  background: #f4f4f4;
+}
+
+.map-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width: 900px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-overlay h1 {
+    font-size: 2.2rem;
+  }
+
+}
+/* =========================
+   NGO PAGE
+========================= */
+
+.ngo-hero {
+  height: 70vh;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('/images/image7.png');
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ngo-overlay {
+  color: white;
+  padding: 20px;
+}
+
+.ngo-overlay h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.ngo-overlay p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
+
+/* INTRO SECTION */
+
+.ngo-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 80px 10%;
+  align-items: center;
+  background: #fff;
+}
+
+.ngo-text h2 {
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+.ngo-text p {
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.ngo-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* PROGRAMS SECTION */
+
+.ngo-programs {
+  padding: 80px 10%;
+  background: #f8f7f4;
+  text-align: center;
+}
+
+.ngo-programs h2 {
+  margin-bottom: 50px;
+  color: #1d3557;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.program-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+}
+
+.program-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.program-card h3 {
+  padding: 20px 20px 10px;
+  color: #1d3557;
+}
+
+.program-card p {
+  padding: 0 20px 25px;
+  line-height: 1.7;
+}
+
+/* IMPACT SECTION */
+
+.ngo-impact {
+  background:
+  linear-gradient(rgba(0,0,0,0.6),
+  rgba(0,0,0,0.6)),
+  url('/images/image6.png');
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  padding: 100px 10%;
+  text-align: center;
+  color: white;
+}
+
+.impact-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.impact-content p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.ngo-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background: #d4a373;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.ngo-btn:hover {
+  background: #bc8a5f;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 900px) {
+
+  .ngo-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ngo-overlay h1 {
+    font-size: 2.5rem;
+  }
+
 }
