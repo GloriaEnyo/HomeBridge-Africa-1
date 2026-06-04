@@ -2,7 +2,9 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+
+// FIXED PORT LINE
+const PORT = process.env.PORT || 3000;
 
 // View engine
 app.set('view engine', 'ejs');
@@ -15,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
   res.render('home');
 });
+
 app.get('/immersion', (req, res) => {
   res.render('immersion');
 });
@@ -39,6 +42,7 @@ app.get('/about', (req, res) => {
   res.render('about');
 });
 
+// IMPORTANT: Render needs this
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
