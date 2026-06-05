@@ -45,4 +45,4 @@ app.get('/about', (req, res) => {
 // IMPORTANT: Render needs this
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-});
+})
