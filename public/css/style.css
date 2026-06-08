@@ -1563,7 +1563,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
+  background:  rgba(11, 46, 38, 0.85);
   padding: 15px 30px;
   position: relative;
 }
