@@ -1,24 +1,23 @@
 <nav class="navbar">
+  
+  <!-- Logo -->
   <div class="logo">
-  <img src="/images/logo.png" alt="Homebridge Africa Logo">
-</div>
+    <img src="/images/logo.png" alt="HomeBridge Africa Logo">
+  </div>
 
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <!-- Hamburger Button -->
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
 
-  <ul id="nav-links" class="nav-links">
+  <!-- Navigation Links -->
+  <ul class="nav-links" id="navLinks">
     <li><a href="/">Home</a></li>
-    <li><a href="/immersion">Immersion</a></li>
-    <li><a href="/empowerment">Empowerment</a></li>
     <li><a href="/about">About</a></li>
-    <li><a href="/contact">Contact</a></li>
-    <li><a href="/ngo">NGO</a></li>
+    <li><a href="/services">Services</a></li>
     <li><a href="/gallery">Gallery</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a href="/empowerment">Empowerment Bridge</a></li>
   </ul>
-</nav>
 
-<script>
-function toggleMenu() {
-  const nav = document.getElementById("nav-links");
-  nav.classList.toggle("active");
-}
-</script>
+</nav>
