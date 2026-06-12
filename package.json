@@ -8,9 +8,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.21.2"
-  }
+    "express": "^4.21.2",
+    "sharp": "^0.35.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GloriaEnyo/HomeBridge-Africa-1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GloriaEnyo/HomeBridge-Africa-1/issues"
+  },
+  "homepage": "https://github.com/GloriaEnyo/HomeBridge-Africa-1#readme",
+  "description": ""
 }
